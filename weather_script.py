@@ -2,7 +2,7 @@
 # 그 결과를 csv로 저장하는 파이썬 파일
 import requests
 import csv
-from datetime import datetime
+import datetime
 import os
 
 CITY = "Seoul"
@@ -15,7 +15,8 @@ temp = data["main"]["temp"]
 humidity = data["main"]["humidity"]
 description = data["weather"][0]["description"]
 print(temp, humidity, description)
-timezone = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+# timezone = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+timezone = datetime.datetime.now() + datetime.timedelta(hours=9)
 
 # 위의 4개의 데이터를 가지는 csv 파일 생성
 csv_filename = "seoul_weather.csv"

@@ -9,7 +9,7 @@ on: # 작업을 수행하는 조건
       - main # main에 push가 일어나면 작업 수행
 jobs: # 실행할 작업을 정의
   fetch_weather: # 작업 이름
-    runs-on: ubuntu-lastes # 우분투 최신버전
+    runs-on: ubuntu-latest # 우분투 최신버전
 
     steps: # 실행 동작 단계
       - name: 저장소 체크아웃
